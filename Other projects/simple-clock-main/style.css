@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+body {
+  /* background: #f96167; */
+  background: #ec8b5e;
+}
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 50px;
+}
+
+.clock,
+.hour,
+.minute,
+.second,
+.hr,
+.min,
+.sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s;
+}
+.clock {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 3px solid #160d0f27;
+  box-shadow: 0 15px 20px rgb(0, 0, 0, 0.3),
+    inset 0 15px 20px -6px rgb(0, 0, 0, 0.3),
+    0 -15px 20px rgb(255, 255, 155, 0.1),
+    inset 0 -15px 20px rgb(255, 255, 155, 0.1);
+  background-image: url(img/roman-numeral-clock-face-png-4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.clock::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #1d1414;
+  box-shadow: inset -5px 0 10px rgb(0, 0, 0, 0.4);
+  border-radius: 50%;
+  z-index: 100;
+}
+/* for hour  */
+.clock .hour,
+.hr {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+.clock .hour .hr::before {
+  content: "";
+  width: 6px;
+  height: 120px;
+  background-color: #141a46;
+  border-radius: 500px;
+  box-shadow: inset -2px 0 5px rgb(0, 0, 0, 0.4);
+  position: absolute;
+  margin-top: -60px;
+}
+/* for minute  */
+.clock .minute,
+.min {
+  width: 190px;
+  height: 190px;
+  position: absolute;
+}
+.clock .minute .min::before {
+  content: "";
+  width: 4px;
+  height: 160px;
+  background-color: #141a46;
+  border-radius: 500px;
+  box-shadow: inset -2px 0 5px rgb(0, 0, 0, 0.4);
+  position: absolute;
+  margin-top: -50px;
+}
+/* for second */
+.clock .second,
+.sec {
+  width: 210px;
+  height: 210px;
+  position: absolute;
+}
+.clock .second .sec::before {
+  content: "";
+  width: 3px;
+  height: 150px;
+  background-color: #141a46;
+  border-radius: 500px;
+  box-shadow: inset -2px 0 5px rgb(0, 0, 0, 0.4);
+  position: absolute;
+  margin-top: -90px;
+}
+.hr,
+.min,
+.sec {
+  position: absolute;
+}
+
+/* Digital clock  */
+
+.digital-clock {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 60px;
+  font-weight: 600;
+  /* background-color: #141a46; */
+  color: #141a46;
+  /* color: #ec8b5e; */
+  border: 6px solid #141a46;
+  /* border: 6px solid #ec8b5e; */
+  border-radius: 5px;
+}
+.digital-clock .h,
+.m,
+.s {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+}
+
+footer {
+  border-top: 5px solid rgba(0, 162, 255, 0.301);
+  border-radius: 50px 50px 0 0;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #141a46;
+  box-shadow: 0px -2px 20px 1px rgba(68, 26, 26, 0.527);
+}
+footer .logo,
+.name {
+  font-size: 23px;
+  font-weight: 600;
+  color: #15d8f16c;
+}
+footer .logo span {
+  color: #ec8b5e;
+  font-size: 25px;
+  font-weight: 700;
+}
